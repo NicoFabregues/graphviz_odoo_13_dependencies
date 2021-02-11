@@ -1,0 +1,200 @@
+digraph {
+        
+    l10n_ar_afip_tables -> l10n_ar;
+    l10n_ar_afip_tables -> uom;
+    l10n_ar_afip_tables -> l10n_account_voucher_type;
+
+
+    l10n_ar -> base_vat_ar;
+    l10n_ar -> account;
+    l10n_ar -> base_codes;
+    l10n_ar -> currency_inverse_rate;
+
+
+    
+    l10n_ar_electronic_invoice_report_sale_stock -> l10n_ar_electronic_invoice_report;
+    l10n_ar_electronic_invoice_report_sale_stock -> sale_stock;
+
+
+
+    l10n_ar_electronic_invoice_report -> l10n_ar_afip_webservices_wsfe;
+
+
+    l10n_ar_check_location -> l10n_account_check;
+
+
+    
+    l10n_ar_all -> base_vat_ar;
+    l10n_ar_all -> l10n_ar_account_check_collect;
+    l10n_ar_all -> l10n_ar_account_check_sale;
+    l10n_ar_all -> l10n_ar_account_payment_report;
+    l10n_ar_all -> l10n_ar_check_location;
+    l10n_ar_all -> l10n_ar_electronic_invoice_report;
+    l10n_ar_all -> l10n_ar_perceptions;
+    l10n_ar_all -> l10n_ar_sale;
+    l10n_ar_all -> l10n_ar_stock_picking_report;
+    l10n_ar_all -> l10n_ar_vat_diary;
+    l10n_ar_all -> l10n_credit_cards;
+    l10n_ar_all -> l10n_payment_global_currency_rate;
+
+
+    
+    l10n_ar_afip_webservices_wsfe -> invoice_currency_rate;
+    l10n_ar_afip_webservices_wsfe -> l10n_ar_afip_webservices_wsaa;
+    l10n_ar_afip_webservices_wsfe -> l10n_ar_perceptions;
+    l10n_ar_afip_webservices_wsfe -> l10n_ar_point_of_sale;
+
+
+    l10n_ar_afip_webservices_wsaa -> l10n_ar_afip_tables;
+
+
+    
+    l10n_ar_pos_invoicing -> l10n_ar_afip_webservices_wsfe;
+    l10n_ar_pos_invoicing -> point_of_sale;
+
+
+    l10n_ar_point_of_sale -> l10n_ar_afip_tables;
+
+
+    Perceptions_SIFERE -> l10n_ar_perceptions;
+
+
+    l10n_ar_perceptions -> l10n_ar_taxes;
+    l10n_ar_perceptions -> invoice_currency_rate;
+
+
+    
+    l10n_ar_no_documents_journal -> account;
+    l10n_ar_no_documents_journal -> l10n_ar_invoice_presentation;
+
+
+    l10n_ar_invoice_presentation -> l10n_ar_perceptions;
+
+
+    
+    l10n_ar_stock_picking_report -> l10n_ar_stock;
+    l10n_ar_stock_picking_report -> sale_stock;
+
+
+    
+    l10n_ar_stock -> stock;
+    l10n_ar_stock -> l10n_ar_point_of_sale;
+
+
+    
+    l10n_ar_sale -> sale;
+    l10n_ar_sale -> l10n_ar_point_of_sale;
+
+
+    Retentions_SIFERE -> l10n_ar_retentions;
+
+
+    l10n_ar_retentions_sicore -> l10n_ar_retentions;
+
+
+    
+    l10n_ar_retentions -> l10n_payment_line;
+    l10n_ar_retentions -> l10n_ar_taxes;
+    l10n_ar_retentions -> payment_imputation;
+
+
+    
+    l10n_payment_global_currency_rate -> l10n_payment_line;
+    l10n_payment_global_currency_rate -> invoice_currency_rate;
+
+
+    l10n_credit_cards -> l10n_account_check;
+
+
+    l10n_ar_vat_diary -> l10n_ar_retentions;
+
+
+    
+    l10n_ar_taxes -> base_codes;
+    l10n_ar_taxes -> l10n_ar;
+
+
+    l10n_fixed_rate -> base;
+
+
+    l10n_deposit_slip -> l10n_account_check;
+
+
+    l10n_default_payment_journal -> account;
+
+
+    
+    l10n_check_rate -> l10n_payment_line_rate;
+    l10n_check_rate -> l10n_account_check;
+
+
+    
+    l10n_account_voucher_type -> l10n_voucher_type;
+    l10n_account_voucher_type -> account;
+
+
+    l10n_account_payment -> l10n_payment_line;
+
+
+    l10n_account_check -> l10n_payment_line;
+
+
+    
+    invoice_currency_rate -> l10n_fixed_rate;
+    invoice_currency_rate -> account;
+
+
+    
+    payment_imputation_default_journal -> payment_imputation;
+    payment_imputation_default_journal -> l10n_default_payment_journal;
+
+
+    payment_imputation -> account;
+
+
+    l10n_voucher_type -> base;
+
+
+    l10n_reject_checks -> l10n_deposit_slip;
+
+
+    
+    l10n_Payment_Type_Rate -> l10n_payment_line_rate;
+    l10n_Payment_Type_Rate -> l10n_account_payment;
+
+
+    l10n_payment_line_rate -> l10n_payment_line;
+
+    l10n_payment_line -> account;
+    l10n_payment_line -> l10n_fixed_rate;
+
+
+    l10n_own_check_reconcile -> l10n_account_check;
+
+    l10n_ar_account_payment_report -> l10n_ar_point_of_sale;
+    l10n_ar_account_payment_report -> l10n_ar_retentions;
+    l10n_ar_account_payment_report -> payment_imputation;
+    
+
+    l10n_ar_account_check_sale -> l10n_account_check;
+
+
+    
+    l10n_ar_account_check_collect -> l10n_ar_check_location;
+    l10n_ar_account_check_collect -> l10n_own_check_reconcile;
+
+
+    currency_inverse_rate -> base;
+
+
+    base_vat_prefix -> base_vat;
+
+
+    base_vat_ar -> base_vat_prefix;
+
+
+    base_codes -> base;
+
+
+
+}
